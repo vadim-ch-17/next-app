@@ -1,0 +1,6 @@
+.container {
+  @apply mx-auto max-w-7xl px-4;
+}
+button.blue-button {
+  @apply border-[1px] border-blue-800 text-blue-800 overflow-hidden font-bold px-4 py-2 rounded-lg relative z-10 after:content-[''] hover:text-white after:top-0 after:left-0 after:scale-x-0 hover:after:scale-x-100 after:absolute after:h-[200%] after:w-full after:bg-blue-800 after:-z-[1] after:transition-transform after:duration-300;
+}
