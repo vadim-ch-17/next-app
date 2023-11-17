@@ -5,7 +5,6 @@ import Pagination from "@/components/Pagination";
 import Title from "@/components/Title";
 
 const Posts = ({ data, currentPage, limit, totalPages }) => {
-  console.log(data);
   return (
     <div className="container">
       <Title size={"2xl"}>Posts</Title>
