@@ -22,7 +22,7 @@ const Posts = ({ data, currentPage, limit, totalPages }) => {
 };
 export async function getServerSideProps({ query }) {
   const currentPage = query.page || "1";
-  const limit = query.limit || "6";
+  const limit = query.limit || "8";
   const res = await fetch(`${postsApi}?_page=${currentPage}&_limit=${limit}`);
   const data = await res.json();
   const totalCount = res.headers.get("x-total-count");
