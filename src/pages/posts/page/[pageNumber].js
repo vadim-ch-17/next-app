@@ -8,7 +8,6 @@ const Posts = ({ data }) => {
   const router = useRouter();
   const { pageNumber } = router.query;
   const currentPage = pageNumber ? parseInt(pageNumber) : 0;
-  // console.log(data.length === 10);
   return (
     <div className="container">
       <h1>Posts</h1>
@@ -40,7 +39,6 @@ export async function getStaticPaths() {
   ).map((item) => ({
     params: { pageNumber: item.toString() },
   }));
-  console.log(paths);
   return {
     paths,
     fallback: true,
@@ -48,10 +46,8 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps(context) {
   const { params } = context;
-  console.log(context);
 
   const pageNumber = params?.pageNumber ? parseInt(params.pageNumber) : 1;
-  // console.log(params);
   const res = await fetch(`${postsApi}?_page=${pageNumber}&_limit=10`);
   const data = await res.json();
 

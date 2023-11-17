@@ -1,7 +1,6 @@
 import React from "react";
 
 const about = ({ data }) => {
-  console.log(data);
   return <div>about</div>;
 };
 
