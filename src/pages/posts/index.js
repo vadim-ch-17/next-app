@@ -8,7 +8,7 @@ const Posts = ({ data, currentPage, limit, totalPages }) => {
   return (
     <div className="container">
       <Title size={"2xl"}>Posts</Title>
-      <div className="grid grid-cols-fluid gap-3 justify-center">
+      <div className="grid grid-cols-fluid gap-3 md:gap-5 justify-center">
         {data && data.map((post) => <Card card={post} key={post.id} />)}
       </div>
       <Pagination
