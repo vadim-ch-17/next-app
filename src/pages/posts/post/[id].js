@@ -20,6 +20,7 @@ const Post = ({ post }) => {
       </button>
       <Title size={"xl"}>{post.title}</Title>
       <p className="text-base md:text-xl max-w-5xl mx-auto mb-4">{post.body}</p>
+      <p>Lorem ipsum</p>
       <button
         className="blue-button"
         onClick={() => {
